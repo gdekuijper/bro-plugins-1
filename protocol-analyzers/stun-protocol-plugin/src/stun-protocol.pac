@@ -30,6 +30,7 @@ type STUN_ATTRIBUTE(is_orig: bool, message_type: uint16, message_trans_id: bytes
 		0x0008	->	message_integrity:	STUN_MSG_INTEGRITY(is_orig,message_type,message_trans_id,attr_len);
 		0x0009	->	error_code:		STUN_ERROR_CODE(is_orig,message_type,message_trans_id,attr_len);
 		0x000b	->	reflected_from:		STUN_ADDRESS(is_orig,message_type,message_trans_id,attr_type);
+		0x0028  ->	xor_reflected_from:	STUN_ADDRESS(is_orig,message_type,message_trans_id,attr_type);
 		0x8022	->	software:		STUN_SOFTWARE(is_orig,message_type,message_trans_id,attr_len);
 		0x8028	->	fingerprint:		STUN_FINGERPRINT(is_orig,message_type,message_trans_id,attr_len);
 		default	->	unknown:		bytestring &length=attr_len;
